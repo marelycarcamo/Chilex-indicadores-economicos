@@ -14,7 +14,9 @@
       "default",
       {
         "ignore": [
-          "-webkit-overflow-scrolling"
+          "-webkit-overflow-scrolling",
+          "-webkit-text-size-adjust",
+          "text-align: -webkit-match-parent"
         ]
       }
     ]
