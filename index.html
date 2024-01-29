@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo-convertidor-divisas.css">
     <title>CHILEX - Indicadores Económicos</title>
@@ -12,14 +13,23 @@
 </head>
 
 <body>
-
-    <div id="logo" class="position-absolute">
-        <img src="images/logo.png" width="120px;" style="border-radius: 50%;" alt="logo-Chilex">
+    <!-- logo chilex -->
+    <div id="logo" class="container-fluid position-absolute mt-auto ms-auto z-2 border-3">
+        <img src="images/logo.png" width="150px;" style="border-radius: 50%;" alt="logo-Chilex">
     </div>
 
-    <!-- CARRUSEL -->
+    <div>
+        <div class="position-absolute z-1 mt-5">
+            <h1 class="text-center">CHILEX</h1>
+            <h2 class="text-center">Indicadores Económicos</h2>
+        </div>
+    </div>
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+
+
+    <!-- CARRUSEL -->
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/panoramica-lasilla.jpg" class="d-block w-100" alt="panoramica-laSilla">
@@ -48,70 +58,31 @@
     <!-- carrusel -->
 
 
-
-
-    <header class="container-fluid m-0">
-
-
-
-
-    </header>
-
-
-    <div id="convertidor">
-        <h1>Indicadores Económicos CHILEX</h1>
-        <br>
+    <!-- Select -->
+    <form class="m-auto" >
+    <select class="form-select form-select-sm mb-3" aria-label="Large select example">
+        <option selected>Open this select menu</option>
+        <option value="1">UF</option>
+        <option value="2">IPC</option>
+        <option value="3">UTM</option>
+    </select>
+</form>
 
 
 
 
-        <div class="contenedor2 bg-warning" style="width: 80%; margin: 0 auto; border-radius: 25px;">
-            <div class="row table-bordered">
-                <!-- importe -->
-                <div class="col-sm-12 col-md-4 col-lg-3   text-center table-bordered">
-                    <label for="importe">Importe</label>
-                    <input type="number" name="importe" id="importe" placeholder="  1">
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-4 text-center table-bordered">
-                    <label for="origen">De...</label>
-                    <select name=origen id="origen" onchange="cambia_origen()">
-                        <option value="origen"><img src="images/usd.svg"> USD - Dólar estadounidense
-                        <option value="origen">EUR - Euro
-                        <option value="origen">GBP - Libra esterlina
-                        <option value="origen">INR - Rupia india
-                        <option value="origen">AUD - Dólar australiano
-                        <option value="origen">CLP - Peso chileno
-                        <option value="origen">CLP - Peso chileno
-                    </select>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-1 text-center">
-                    <button type="button" class="btn btn-outline-primary">cambio</button>
-                </div>
-                <div class=" col-md-8 col-sm-12 col-lg-4 text-center">
-                    <label for="destino">Para</label>
-                    <select name=destino id="destino" onchange="cambia_destino()">
-                        <option value="origen"> USD - Dólar estadounidense
-                        <option value="origen">EUR - Euro
-                        <option value="origen">GBP - Libra esterlina
-                        <option value="origen">INR - Rupia india
-                        <option value="origen">AUD - Dólar australiano
-                        <option value="origen">CLP - Peso chileno
-                        <option value="origen">CLP - Peso chileno
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <button type="button" class="btn btn-outline-primary">Convertir moneda</button>
-                </div>
-            </div>
-
-        </div>
 
 
-        <br><br><br>
-        <p style="font-size: small;">Todas las cifras son tipos de cambio del mercado medio en tiempo real, que no están
-            disponibles para los clientes individuales y sirven solo de referencia.</p>
+
+
+
+
+
+
+
+    <br><br><br>
+    <p style="font-size: small;">Todas las cifras son tipos de cambio del mercado medio en tiempo real, que no están
+        disponibles para los clientes individuales y sirven solo de referencia.</p>
 
 
 
@@ -199,24 +170,19 @@
 
         <br><br>
 
-
+        
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- Opcional: JavaScript de Bootstrap -->
     <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
 
 </body>

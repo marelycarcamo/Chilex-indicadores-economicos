@@ -7,12 +7,6 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#logo{
-    position:absolute;
-    left:10px;
-    top:10px;
-    z-index: 2;
-}
 
 nav{
     background-color: rgb(28, 28, 80);
@@ -48,9 +42,10 @@ nav li:hover{
 #convertidor{
     background-color: rgb(28, 28, 80);
     color:white;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
     text-align: center;
+    z-index: 1;
 }
 #convertidor div div{
     margin: 5px 0;
