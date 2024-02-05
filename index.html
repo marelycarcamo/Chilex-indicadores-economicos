@@ -18,15 +18,6 @@
         <img src="images/logo.png" width="150px;" style="border-radius: 50%;" alt="logo-Chilex">
     </div>
 
-    <div>
-        <div class="position-absolute z-1 mt-5">
-            <h1 class="text-center">CHILEX</h1>
-            <h2 class="text-center">Indicadores Económicos</h2>
-        </div>
-    </div>
-
-
-
 
     <!-- CARRUSEL -->
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -58,18 +49,26 @@
     <!-- carrusel -->
 
 
+    <div>
+        <div class=" mt-5">
+            <h1 class="text-center">CHILEX</h1>
+            <h2 class="text-center">Indicadores Económicos</h2>
+        </div>
+    </div>
+
     <!-- Select -->
-    <form class="m-auto" >
-    <select class="form-select form-select-sm mb-3" aria-label="Large select example">
-        <option selected>Open this select menu</option>
-        <option value="1">UF</option>
-        <option value="2">IPC</option>
-        <option value="3">UTM</option>
-    </select>
-</form>
 
-
-
+    <form class="m-auto">
+        <select id="miSelect" class="form-select form-select-sm mb-3" aria-label="Large select example">
+            <option selected>Open this select menu</option>
+            <option value="1">UF</option>
+            <option value="2">IPC</option>
+            <option value="3">UTM</option>
+        </select>
+        <button id="miBoton" style="background-color: blue; color: white;">Enviar</button>
+        <p id="miParrafo"></p>
+    </form>
+    
 
 
 
@@ -182,7 +181,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
+        <script src="js/chilex.js"></script>
 
 
 </body>
