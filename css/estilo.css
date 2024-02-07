@@ -135,3 +135,30 @@ footer li:last-child {
 
 
 
+/* 
+nueva tabla indicadores economicos */
+body-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+#indicadores {
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+@media (max-width: 600px) {
+    #indicadores {
+        width: 100%;
+    }
+}

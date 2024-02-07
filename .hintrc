@@ -19,6 +19,7 @@
           "text-align: -webkit-match-parent"
         ]
       }
-    ]
+    ],
+    "button-type": "off"
   }
 }
