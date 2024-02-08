@@ -7,156 +7,34 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-nav{
-    background-color: rgb(28, 28, 80);
+div{
+    border: 1px solid white;
 }
-
-nav li{
-    display: inline-block;
-    padding: 20px;
-}
-
-nav a{
-    color: white;
-    text-decoration:none;
-    
-}
-
-nav li:hover{
-    background-color: grey ;
-    color:rgb(28, 28, 80);
-    text-decoration: underline;
-}
-
-
-
-
-
-/*********** CONVERTIDOR DIVISAS ************/
-        
-.titulo{
-    color:rgb(28, 28, 80)
-}
-
-#convertidor{
-    background-color: rgb(28, 28, 80);
-    color:white;
-    /* padding-top: 25px;
-    padding-bottom: 25px; */
-    text-align: center;
-    z-index: 1;
-}
-#convertidor div div{
-    margin: 5px 0;
-    
-}
-
-#importe, #origen, #destino{
-    height: 40px;
-    border-radius: 25px;
-    width: 180px;
-}
-
-#importe{
-    font-size: 25px;
-}
-
-#btn {
-
-    background-size: cover;
-    background-position: center;
-    border: none;
-
-    width: 75px;
-    height:75px;
-    border-radius: 900px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-
-
-
-
-
-/****************** TABLA *********************/
-
-table img{
-    width: 45px;
-}
-
-table{
-    /* padding: 19px; */
-    margin: auto;
-  /*  border-collapse: collapse;  */
-}
-
-
-table tr{
-  /*  border-bottom: darkblue 1px solid;  */
-    text-align: center;
-}
-
-
-table td, th{
-    padding: 3px 10px;
-}
-
-
-.azul{
-    background-color: rgb(28, 28, 80);
-    color:white
-}
-
-.gris{
-    background-color: darkgray;
-    color:rgb(28, 28, 80)
-}
-
-/********* FOOTER *************/
-
-footer li{
-    display: inline-block;
-    border-right: rgb(28, 28, 80) 2px solid;
-    padding-right: 20px;
-    padding-left: 20px;
-
-}
-
-
-footer ul{
-    text-align: center;
-}
-
-footer li:last-child {
-    border-right: none;
-}       
 
 
 
 /* 
-nueva tabla indicadores economicos */
-body-table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+##################################### */
+
+#container-table{
     height: 100vh;
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 #indicadores {
     width: 80%;
     max-width: 600px;
     border-collapse: collapse;
 }
-th, td {
-    border: 1px solid black;
+td {
+    border: 1px solid rgb(16, 16, 16);
     padding: 8px;
-    text-align: left;
+    text-align:right;
 }
+
 @media (max-width: 600px) {
     #indicadores {
         width: 100%;

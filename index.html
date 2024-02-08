@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>CHILEX - Indicadores Económicos</title>
     <link rel="icon" href="images/logo-sinTexto.png" type="image/x-png">
-
 </head>
 
 <body>
@@ -50,24 +49,52 @@
     <!-- carrusel -->
 
 
-    <div>
-        <div class=" mt-5">
+    <!-- tabla indicadores economicos -->
+    <div id="container-table">
+        <div class="mt-5 pt-2">
             <h2 class="text-center">Indicadores Económicos</h2>
         </div>
-        <div>
-            <table id="indicadores">
-                <thead>
+        <div class="d-flex justify-content-center pt-2">
+            <table id="indicadores" >
+                <thead >
                     <tr>
-                        <th>Nombre</th>
-                        <th>Valor</th>
+                        <th class="text-start ps-5">Nombre</th>
+                        <th class="text-end pe-5">Valor</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="body-table">
                 </tbody>
             </table>
         </div>
     </div>
 
+
+
+
+
+
+    <!-- calculadora -->
+    <div>
+        <h2 class="text-center">Calculadora</h2>
+    </div>
+    <div class="mt-5">
+        <div class="input-group">
+            <span class="input-group-text">monto</span>
+            <input type="text" class="form-control">
+        </div>
+        <div>
+            <select id="miSelect" class="form-select form-select-sm mb-3" aria-label="Large select example">
+            </select>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <button id="miBoton" style="background-color: rgb(67, 67, 101); color: white;">Enviar</button>
 
 
     <!-- ################################################################################## -->
@@ -85,10 +112,6 @@
 
     <form class="m-auto">
         <select id="miSelect" class="form-select form-select-sm mb-3" aria-label="Large select example">
-            <option selected>Open this select menu</option>
-            <option value="1">UF</option>
-            <option value="2">IPC</option>
-            <option value="3">UTM</option>
         </select>
         <button id="miBoton" style="background-color: blue; color: white;">Enviar</button>
         <p id="miParrafo"></p>
@@ -105,95 +128,6 @@
 
 
 
-    <br><br><br>
-    <p style="font-size: small;">Todas las cifras son tipos de cambio del mercado medio en tiempo real, que no están
-        disponibles para los clientes individuales y sirven solo de referencia.</p>
-
-
-
-
-
-    <!-- 
-    <br><br><br>
-    <div id="contenedor_tabla" class=".table-responsive table-bordered">
-        <thead class="thead-inverse">
-
-            <table>
-                <tr class="azul" id="titulo_tabla">
-                    <th></th>
-                    <th><img src="images/usd.svg"> USD</th>
-                    <th><img src="images/eur.svg"> EUR</th>
-                    <th><img src="images/gbp.svg"> GBP</th>
-                    <th><img src="images/inr.svg"> INR</th>
-                    <th><img src="images/aud.svg"> AUD</th>
-                </tr>
-
-                <tr class="gris">
-                    <th><img src="images/usd.svg"> USD</th>
-                    <td>1,00000</td>
-                    <td>0,90407</td>
-                    <td>0,77000</td>
-                    <td>71,1200</td>
-                    <td>1,48471</td>
-                </tr>
-
-                <tr class="azul">
-                    <th><img src="images/eur.svg"> EUR</th>
-                    <td>1,10443</td>
-                    <td>1,00000</td>
-                    <td>0,84744</td>
-                    <td>78,5472</td>
-                    <td>1,63977</td>
-                </tr>
-
-                <tr class="gris">
-                    <th><img src="images/gbp.svg"> GBP</th>
-                    <td>1,30326</td>
-                    <td>1,18003</td>
-                    <td>1,00000</td>
-                    <td>92,6879</td>
-                    <td>1,93497</td>
-
-                </tr>
-
-                <tr class="azul">
-                    <th><img src="images/inr.svg"> INR</th>
-                    <td>0,01406</td>
-                    <td>0,01273</td>
-                    <td>0,01079</td>
-                    <td>1,00000</td>
-                    <td>0,02088</td>
-
-                </tr>
-
-                <tr class="gris">
-                    <th><img src="images/aud.svg"> AUD</th>
-                    <td>0,67353</td>
-                    <td>0,60984</td>
-                    <td>0,51680</td>
-                    <td>47,9015</td>
-                    <td>1,00000</td>
-                </tr>
-
-            </table>
-    </div>
-    <br><br>
-    <footer style="background-color: darkgray; color: rgb(28, 28, 80);">
-        <hr style="background-color: rgb(28, 28, 80); height: 1px;">
-
-
-        <p style="text-align: center;">2024 CHILEX SPA.</p>
-        <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Mapa de Sitio</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Politicas de cookies</a></li>
-            <li><a href="#">Complementos</a></li>
-            <li><a href="#">Contacto</a></li>
-
-        </ul>
-
-        <br><br> -->
 
 
 

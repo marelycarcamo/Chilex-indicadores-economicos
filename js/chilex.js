@@ -1,34 +1,3 @@
-// async function capturaDatos(){
-//     url= 'https://mindicador.cl/api';
-//     let respuesta =await fetch(url);
-//     let datosIndicador =await respuesta.json();
-//     console.log(datosIndicador);
-//     $("#uf-nombre").text(`${datosIndicador.uf.nombre}`);
-//     $
-//     $("#uf-valor").text(`${datosIndicador.uf.valor}`);
-// }; 
-
-
-// $(document).ready(function(){
-//     $("#bt-verifica").click(capturaDatos);
-// });
-
-// $("#miBoton").click(function(event) {
-//     event.preventDefault();
-//     var valorSeleccionado = $("#miSelect").val();
-//     $("#miParrafo").text("El valor seleccionado es: " + valorSeleccionado);
-// });
-
-
-// document.getElementById("miBoton").addEventListener("click", function(event) {
-//     event.preventDefault();
-//     var select = document.getElementById("miSelect");
-//     var valorSeleccionado = select.value;
-//     document.getElementById("miParrafo").innerText = "El valor seleccionado es: " + valorSeleccionado;
-
-// });
-
-
 async function capturaDatos() {
     const url = 'https://mindicador.cl/api';
     const respuesta = await fetch(url);
@@ -56,10 +25,22 @@ async function capturaDatos() {
     for (const item of extractedData) {
         const row = table.insertRow();
         const cell1 = row.insertCell(0);
-        const cell2 = row.insertCell(1);
+        cell1.className = 'text-start ps-5';  // Alineación a la izquierda
         cell1.innerHTML = item.nombre;
+        const cell2 = row.insertCell(1);
+        cell2.className = 'text-end pe-5';  // Alineación a la derecha
         cell2.innerHTML = item.valor;
     }
-}
 
+
+
+ // Añadir los keys a la lista desplegable
+const select = document.getElementById('miSelect');
+for (const key in filteredData) {
+    const opcion = document.createElement("option");
+    opcion.text = key;
+    select.add(opcion);
+}
+}
+    
 capturaDatos();
