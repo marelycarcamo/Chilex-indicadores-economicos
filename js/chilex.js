@@ -44,3 +44,10 @@ for (const key in filteredData) {
 }
     
 capturaDatos();
+
+
+
+
+
+
+

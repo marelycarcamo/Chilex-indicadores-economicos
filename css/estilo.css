@@ -17,7 +17,7 @@ div{
 ##################################### */
 
 #container-table{
-    height: 100vh;
+    /* height: 100vh; */
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -30,7 +30,7 @@ div{
     border-collapse: collapse;
 }
 td {
-    border: 1px solid rgb(16, 16, 16);
+    border: 1px solid rgb(85, 71, 71);
     padding: 8px;
     text-align:right;
 }
@@ -39,4 +39,5 @@ td {
     #indicadores {
         width: 100%;
     }
+
 }
