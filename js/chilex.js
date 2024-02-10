@@ -53,7 +53,7 @@ capturaDatos();
 
 var filtroPesos;
 
-$("id-btn-go").click(function () {
+document.getElementById("id-btn-go").addEventListener("click", function () {
 	var valorInput = document.getElementById("id-input-convert").value;
 	var valorSelect = document.getElementById("id-select").value;
 
@@ -86,11 +86,3 @@ function calcularIndicadores(valorInput,valorSelect){
 ;
 
 };
-
-
-
-
-
-
-
-
