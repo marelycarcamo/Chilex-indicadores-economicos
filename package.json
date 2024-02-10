@@ -1,8 +1,8 @@
 {
   "name": "chilex",
   "version": "1.0.0",
-  "description": "convertidor de divisas",
-  "main": "convertidor-divisas.js",
+  "description": "indicadores economicos",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

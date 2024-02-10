@@ -7,9 +7,9 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div{
+/* div{
     border: 1px solid white;
-}
+} */
 
 
 
@@ -17,7 +17,6 @@ div{
 ##################################### */
 
 #container-table{
-    /* height: 100vh; */
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -41,3 +40,17 @@ td {
     }
 
 }
+
+#change{
+    margin-left: 400px;
+    transition: all 1s;
+    width: 400px;
+}
+
+#change:click{
+    box-shadow: 10px 10px 10px 10px lightgray, -10px -10px 10px 10px lightgray;
+    transform: scale(1.1) rotate(360deg);
+    transition: 1s;
+}
+
+
