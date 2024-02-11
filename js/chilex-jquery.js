@@ -46,16 +46,6 @@ function capturaDatos() {
 // una tabla con el id 'indicadores'.
 capturaDatos();
 
-// $(document).ready(function () {
-// 	$("#img-change").click(function () {
-// 		$(this).css({
-// 			transition: "1s",
-// 			// "box-shadow":
-// 			// 	"10px 10px 10px 10px lightgray, -10px -10px 10px 10px lightgray",
-// 			transform: " rotate(180deg)",
-// 		});
-// 	});
-
 $(document).ready(function () {
 	var rotation = 0;
 	$("#img-arrows").click(function () {

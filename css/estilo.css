@@ -7,9 +7,9 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* div{
+ div{ 
     border: 1px solid white;
-} */
+} 
 
 /* 
 ##################################### */
@@ -40,7 +40,7 @@ td {
 
 #img-arrows {
 	transition: transform 0.3s ease;
-}
+    }
 
 #img-arrows:hover {
 	cursor: pointer;
@@ -56,3 +56,36 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
 	-moz-appearance: textfield;
 }
+
+#id-input-convert,
+#id-resultado {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #333;
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+/* Estilos para el tema oscuro */
+@media (prefers-color-scheme: dark) {
+	input,
+	p {
+		background-color: black;
+		color: white;
+		/* Añade aquí el resto de tus estilos para el tema oscuro */
+	}
+}
+
+
+input {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input:hover {
+    box-shadow: 0 0 10px #9ecaed;
+  }
+  

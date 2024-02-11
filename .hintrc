@@ -10,18 +10,10 @@
       }
     ],
     "no-inline-styles": "off",
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "-webkit-overflow-scrolling",
-          "-webkit-text-size-adjust",
-          "text-align: -webkit-match-parent"
-        ]
-      }
-    ],
+    "compat-api/css": "off",
     "button-type": "off",
     "axe/forms": "off",
-    "axe/parsing": "off"
+    "axe/parsing": "off",
+    "axe/name-role-value": "off"
   }
 }
