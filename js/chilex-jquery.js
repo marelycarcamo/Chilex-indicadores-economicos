@@ -56,25 +56,28 @@ $(document).ready(function () {
 		});
 	});
 
-	$("#id-input-convert").click(function () {
+	$(".input").click(function () {
 		$(this).focus();
 	});
 
-	$("#id-input-convert").on("input", function () {
+	$("#id-input").on("input", function () {
 		var valorInput = $(this).val();
 		var valorSelect = $("#id-select").val();
 		calcularIndicadores(valorInput, valorSelect);
 	});
 
+
 	function calcularIndicadores(valorInput, valorSelect) {
+		console.log(valorInput,valorSelect);
 		for (const key in filtroPesos) {
 			if (key == valorSelect) {
 				var resultado = valorInput * filtroPesos[valorSelect].valor;
 				var valorFormateado = Number(resultado).toLocaleString("es-CL"); // Formato chileno
-
+				console.log("formateado" + valorFormateado);
 				// Muestra el resultado en el elemento con id "resultado"
-				$("#id-resultado").text(valorFormateado);
+				$("#id-result").text(valorFormateado);
 			}
 		}
 	}
 });
+

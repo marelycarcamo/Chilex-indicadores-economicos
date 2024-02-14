@@ -14,6 +14,7 @@
     "button-type": "off",
     "axe/forms": "off",
     "axe/parsing": "off",
-    "axe/name-role-value": "off"
+    "axe/name-role-value": "off",
+    "meta-viewport": "off"
   }
 }
