@@ -67,30 +67,19 @@ input:hover {
 	box-shadow: 0 0 10px #9ecaed;
 }
 
-/* #id-input-convert,
-#id-resultado {
+.input,
+.p {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	color: #333;
 	width: 200px;
 	padding: 10px;
 	border: 1px solid #ccc;
-	/* border-radius: 4px;
-	box-sizing: border-box; */
-	/* background-color: white
- } */
+ border-radius: 4px;
+	box-sizing: border-box; 
+ background-color: white
+ } 
 
-
-P,#id-resultado{
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	/* color: #333; */
-	width: 200px;
-	padding:15px ;
-	/* border: 1px solid #ccc; */
-	border-radius: 4px;
-	box-sizing: border-box;
-}
 
 
 

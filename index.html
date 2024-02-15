@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang="es" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -75,11 +75,7 @@
         <h2 class="text-center">Calculadora</h2>
     </div>
 
-    <!-- Select -->
-    <div class="d-flex justify-content-center p-lg-5 ">
-        <select id="id-select" class="form-select form-select-lg text-center" style="width:40%">
-        </select>
-    </div>
+
 
 
     <!-- <div class="row m-1">
@@ -119,25 +115,39 @@
 
 
     <div id="id-box" class="d-flex flex-column flex-md-row">
-        <div class="col-12 col-md-3"></div>
-        
-        <div class="col-12 col-md-2 d-flex justify-content-center m-5">
-            <img id="img-arrows" src="images/img-arrow-change.png" class="ing-fluid">
-        </div>
-        <div class="col-12 col-md-2 d-flex flex-column p-3">
+        <!-- se apilarán verticalmente en pantallas pequeñas y se alinearán horizontalmente en pantallas de tamaño mediano y más grandes. -->
+
+        <div class="col-12 col-md-2"></div>
+
+
+        <div class="col-12 col-md-3 d-flex flex-column p-3">
             <p class="bg-black text-center pt-2">Indicadores</p>
             <input id="id-input" type="number" class="text-right">
-        </div> 
-        <div class="col-12 col-md-2 d-flex flex-column p-3">
+        </div>
+
+        <div class="col-12 col-md-2 d-flex flex-column p-3 justify-content-center">
+            <!-- Select -->
+            <div class="d-flex justify-content-center">
+                <select id="id-select" class="form-select form-select text-center">
+                </select>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img id="img-arrows" src="images/img-gira80.png" class="ing-fluid">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 d-flex flex-column p-3">
             <p class="bg-black text-center pt-2">clp</p>
             <p id="id-result" class="pb-1 bg-warning">resultado</p>
         </div>
-        <div class="col-12 col-md-3"></div>
+
+        <div class="col-12 col-md-2"></div>
+
     </div>
 
-<footer>
-    <hr>
-</footer>
+    <footer>
+        <hr>
+    </footer>
 
 
 
