@@ -1,4 +1,5 @@
 var filtroPesos;
+var retorno = false;
 
 function capturaDatos() {
 	$.ajax({
@@ -27,7 +28,9 @@ function capturaDatos() {
 			const table = $("#indicadores").find("tbody")[0];
 			for (const item of extractedData) {
 				const row = $(table).append("<tr></tr>");
-				$(row).append("<td class='text-start ps-5'>" + item.nombre.toUpperCase() + "</td>");
+				$(row).append(
+					"<td class='text-start ps-5'>" + item.nombre.toUpperCase() + "</td>"
+				);
 				$(row).append("<td class='text-end pe-5'>" + item.valor + "</td>");
 			}
 
@@ -49,21 +52,26 @@ capturaDatos();
 $(document).ready(function () {
 	var rotation = 0;
 	$("#id-img-arrows").click(function () {
+		retorno = !retorno;
 		rotation += 180;
 		$(this).css({
 			transform: "rotate(" + rotation + "deg)",
 			transition: "1s",
 		});
-		var textoP1 = $("#p-1").text();
-		var textoP2 = $("#p-2").text();
-		var texto3 = $("#id-input").val(); 
-		var texto4 = $("#id-result").text();
-		console.log("va al input" + texto4);
-		$("#p-1").text(textoP2);
-		$("#p-2").text(textoP1);
-		$("#id-input").val(texto4);
-		$("#id-result").text(texto3);
+		var text_p1 = $("#p-1").text();
+		var text_p2 = $("#p-2").text();
+		var text_input = $("#id-input").val();
+		var text_result = $("#id-result").text();
+		$("#p-1").text(text_p2);
+		$("#p-2").text(text_p1);
 
+		let newValor = Number(
+			text_result.replace("$", "").replace(".", "").replace(",", ".")
+		);
+		newValor = newValor === 0 ? " " : newValor;
+		$("#id-input").val(newValor);
+		$("#id-input").focus();
+		$("#id-result").text(darFormatoMoneda(text_input));
 	});
 
 	$(".input").click(function () {
@@ -76,30 +84,46 @@ $(document).ready(function () {
 		calcularIndicadores(valorInput, valorSelect);
 	});
 
-	$("#id-select").change(function(){
-		var valorSelect = $("#id-select").val();
-		$("#p-1").text(valorSelect.toUpperCase());
-		$("#p-2").text("CLP");
-		$("#id-input").val(0);
-		$("#id-result").text("0");
-	})
-
-
-
-	function calcularIndicadores(valorInput, valorSelect) {
-		console.log(valorInput,valorSelect);
-		for (const key in filtroPesos) {
-			if (key == valorSelect) {
-				var resultado = valorInput * filtroPesos[valorSelect].valor;
-				var valorFormateado = Number(resultado).toLocaleString("es-CL"); // Formato chileno
-				console.log("formateado" + valorFormateado);
-				// Muestra el resultado en el elemento con id "resultado"
-				$("#id-result").text(resultado);
-			}
-		}
-	}
-
-
-
+	$("#id-select").change(function () {
+		resetear();
+	});
 });
 
+function calcularIndicadores(valorInput, valorSelect) {
+	for (const key in filtroPesos) {
+		if (key == valorSelect) {
+			resultado = retorno
+				? valorInput / filtroPesos[valorSelect].valor
+				: valorInput * filtroPesos[valorSelect].valor;
+
+			// Muestra el resultado en el elemento con id "resultado"
+			$("#id-result").text(darFormatoMoneda(resultado));
+		}
+	}
+	return;
+}
+
+function darFormatoMoneda(numero) {
+	const valorFormateado = new Intl.NumberFormat("es-CL", {
+		style: "currency",
+		currency: "CLP",
+		minimumFractionDigits: 2,
+		maximumFractionDigits: 2,
+	}).format(numero);
+	return valorFormateado;
+}
+
+function resetear() {
+	var valorSelect = $("#id-select").val();
+	$("#p-1").text(valorSelect.toUpperCase());
+	$("#p-2").text("CLP");
+	$("#id-input").val("");
+	$("#id-input").focus();
+	$("#id-result").text("0");
+	retorno = false;
+	return;
+}
+
+function girar_img(){
+
+}
