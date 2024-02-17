@@ -3,12 +3,13 @@
 	margin: 0;
 }
 
-body {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+div{
+	border: 1px solid;
+	border-color:crimson;
 }
 
-/* div {
-	border: 1px solid white;
+/* body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 } */
 
 /* 
@@ -16,6 +17,7 @@ body {
 /* TABLA INDICADORES ECONOMICOS */
 /* 
 ##################################### */
+
 #container-table {
 	margin: 0;
 	padding: 0;
@@ -23,16 +25,15 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-#indicadores {
-	width: 80%;
-	max-width: 600px;
-	border-collapse: collapse;
+#body-table{
+	
 }
+
 td {
 	border: 1px solid rgb(85, 71, 71);
 	padding: 8px;
 	text-align: right;
-}
+	}
 
 @media (max-width: 600px) {
 	#indicadores {
@@ -46,14 +47,6 @@ td {
 /* 
 ##################################### */
 
-/* #img-arrows {
-	transition: transform 0.3s ease;
-} */
-
-/* #img-arrows:hover {
-	cursor: pointer;
-	transform: scale(1.1);
-} */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -71,25 +64,14 @@ input:hover {
 .p {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
-	color: #333;
+	/* color: #333; */
 	width: 200px;
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box; 
-	background-color: white
+	/* background-color: white */
 } 
 
 
 
-
-/* Estilos para el tema oscuro */
-@media (prefers-color-scheme: dark) {
-
-	input,
-	p {
-		background-color: black;
-		color: white;
-		/* Añade aquí el resto de tus estilos para el tema oscuro */
-	}
-}

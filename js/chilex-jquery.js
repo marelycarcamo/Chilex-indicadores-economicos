@@ -51,6 +51,9 @@ capturaDatos();
 
 $(document).ready(function () {
 	var rotation = 0;
+	$("#id-input").focus();
+
+	
 	$("#id-img-arrows").click(function () {
 		retorno = !retorno;
 		rotation += 180;
@@ -58,6 +61,7 @@ $(document).ready(function () {
 			transform: "rotate(" + rotation + "deg)",
 			transition: "1s",
 		});
+		
 		var text_p1 = $("#p-1").text();
 		var text_p2 = $("#p-2").text();
 		var text_input = $("#id-input").val();
@@ -124,6 +128,4 @@ function resetear() {
 	return;
 }
 
-function girar_img(){
 
-}

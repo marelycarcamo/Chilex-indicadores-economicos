@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="light">
+<html lang="es">
 <!-- <html lang="es" data-bs-theme="dark"> -->
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     <link rel="icon" href="images/logo-icon.png" type="image/x-png">
 </head>
 
-<body>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
     <!-- logo chilex -->
     <div id="logo" class="container-fluid position-absolute mt-auto ms-auto z-2">
         <img src="images/logo.png" width="15%;" alt="logo-Chilex">
@@ -49,14 +49,14 @@
     </div>
     <!-- carrusel -->
 
-
+ 
     <!-- tabla indicadores economicos -->
     <div id="container-table">
         <div>
             <h2 class="text-center">Indicadores Económicos</h2>
         </div>
         <div class="d-flex justify-content-center pt-2">
-            <table id="indicadores">
+            <table id="indicadores" class="table-xs-12" style="width:80%; max-width:600px;">
                 <thead>
                     <tr>
                         <th class="text-start ps-5">INDICE</th>
@@ -69,23 +69,21 @@
         </div>
     </div>
 
-
+    
     <!-- calculadora -->
 
-    <div class="mt-5">
+    
+    <div>
         <h2 class="text-center">Calculadora</h2>
     </div>
 
     <div id="id-box" class="d-flex flex-column flex-md-row">
         <!-- se apilarán verticalmente en pantallas pequeñas y se alinearán horizontalmente en pantallas de tamaño mediano y más grandes. -->
-
         <div class="col-12 col-md-2"></div>
-
         <div class="col-12 col-md-3 d-flex flex-column p-3">
-            <p id="p-1" class="bg-black text-center pt-2">INDICE</p>
+            <p id="p-1" class="text-center pt-2" style="background-color: rgb(137, 161, 227);">INDICE</p>
             <input id="id-input" type="number" class="text-end ps-2 pe-2">
         </div>
-
         <div class="col-12 col-md-2 d-flex flex-column p-3 justify-content-center">
             <!-- Select -->
             <div class="d-flex justify-content-center">
@@ -93,21 +91,19 @@
                 </select>
             </div>
             <div class="d-flex justify-content-center">
-                <img id="id-img-arrows" src="images/img-gira80.png" class="ing-fluid">
+                <img id="id-img-arrows" src="images/img-gira80.png" class="img-fluid">
             </div>
         </div>
-
         <div class="col-12 col-md-3 d-flex flex-column p-3">
-            <p id="p-2" class="bg-black text-center pt-2">CLP</p>
+            <p id="p-2" class="text-center pt-2" style="background-color: rgb(147, 236, 143);">CLP</p>
             <p id="id-result" class="pb-1 bg-warning ps-2 pe-2 text-end">0</p>
         </div>
-
         <div class="col-12 col-md-2"></div>
-
     </div>
 
     <footer>
         <hr>
+        <p class="text-center">Marely 😊</p>
     </footer>
 
 
