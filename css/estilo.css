@@ -83,13 +83,13 @@ input:hover {
 .p {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
-	color: #333;
+	/* color: #333; */
 	width: 200px;
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box; 
-	background-color: white
+	/* background-color: white */
 } 
 
 
@@ -100,8 +100,8 @@ input:hover {
 
 	input,
 	p {
-		background-color: black;
-		color: white;
+		/* background-color: black; */
+		/* color: white; */
 		/* Añade aquí el resto de tus estilos para el tema oscuro */
 	}
 }

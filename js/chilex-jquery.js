@@ -67,10 +67,13 @@ $(document).ready(function () {
 		let numero_result = Number(
 			text_result.replace("$", "").replace(".", "").replace(",", ".")
 		);
-		console.log("valor para input, sin formato: " + numero_result);
 		numero_result = numero_result == 0 ? " " : numero_result;
 		$("#id-input").val(numero_result);
 		$("#id-result").text(formatearMoneda(text_input));
+		var colorP1 = $("#p-1").css("background-color");
+		var colorP2 = $("#p-2").css("background-color");
+		$("#p-1").css("background-color", colorP2);
+		$("#p-2").css("background-color", colorP1);
 	});
 
 	$(".input").click(function () {
