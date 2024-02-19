@@ -27,7 +27,9 @@ function capturaDatos() {
 			const table = $("#indicadores").find("tbody")[0];
 			for (const item of extractedData) {
 				const row = $(table).append("<tr></tr>");
-				$(row).append("<td class='text-start ps-5'>" + item.nombre.toUpperCase() + "</td>");
+				$(row).append(
+					"<td class='text-start ps-5'>" + item.nombre.toUpperCase() + "</td>"
+				);
 				$(row).append("<td class='text-end pe-5'>" + item.valor + "</td>");
 			}
 
@@ -45,11 +47,11 @@ function capturaDatos() {
 // moneda "Peso". Después de filtrar, extrae el nombre y el valor de cada indicador y los agrega a
 // una tabla con el id 'indicadores'.
 capturaDatos();
-
+var cambio = false;
 $(document).ready(function () {
-
 	var rotation = 0;
 	$("#id-img-arrows").click(function () {
+		cambio = !cambio;
 		rotation += 180;
 		$(this).css({
 			transform: "rotate(" + rotation + "deg)",
@@ -57,16 +59,18 @@ $(document).ready(function () {
 		});
 		var text_p1 = $("#p-1").text();
 		var text_p2 = $("#p-2").text();
-		var text_input = $("#id-input").val(); 
+		var text_input = $("#id-input").val();
 		var text_result = $("#id-result").text();
 		console.log("va al input" + text_result);
 		$("#p-1").text(text_p2);
 		$("#p-2").text(text_p1);
-		let numero_result = Number(text_result.replace("$", "").replace(".", "").replace(",", "."));
-		console.log("valor para input, sin formato: "+numero_result); 
+		let numero_result = Number(
+			text_result.replace("$", "").replace(".", "").replace(",", ".")
+		);
+		console.log("valor para input, sin formato: " + numero_result);
+		numero_result = numero_result == 0 ? " " : numero_result;
 		$("#id-input").val(numero_result);
 		$("#id-result").text(formatearMoneda(text_input));
-
 	});
 
 	$(".input").click(function () {
@@ -79,47 +83,45 @@ $(document).ready(function () {
 		calcularIndicadores(valorInput, valorSelect);
 	});
 
-	$("#id-select").change(function(){
+	$("#id-select").change(function () {
 		limpiar();
 	});
-
 });
 
-	function calcularIndicadores(valorInput, valorSelect) {
-		console.log(valorInput,valorSelect);
-		for (const key in filtroPesos) {
-			if (key == valorSelect) {
-				var resultado = valorInput * filtroPesos[valorSelect].valor;
-				// Muestra el resultado en el elemento con id "resultado"
-				$("#id-result").text(formatearMoneda(resultado));
-			}
+function calcularIndicadores(valorInput, valorSelect) {
+	console.log(valorInput, valorSelect);
+	for (const key in filtroPesos) {
+		if (key == valorSelect) {
+			var resultado;
+			resultado = cambio
+				? valorInput / filtroPesos[valorSelect].valor
+				: valorInput * filtroPesos[valorSelect].valor;
+
+			// Muestra el resultado en el elemento con id "resultado"
+			$("#id-result").text(formatearMoneda(resultado));
 		}
-		return;
-	};
+	}
+	return;
+}
 
-
-function formatearMoneda(num){
+function formatearMoneda(num) {
 	console.log("num: " + num);
 	numFormateado = new Intl.NumberFormat("es-CL", {
 		style: "currency",
 		currency: "CLP",
 		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
+		maximumFractionDigits: 2,
 	}).format(num);
 	return numFormateado;
-	
-};
-
-function limpiar(){
-	var valorSelect = $("#id-select").val();
-		$("#p-1").text(valorSelect.toUpperCase());
-		$("#p-2").text("CLP");
-		$("#id-input").val(" ");
-		$("#id-result").text("0");
-		$("#id-input").focus();
-	return;
-
 }
 
-
-
+function limpiar() {
+	var valorSelect = $("#id-select").val();
+	$("#p-1").text(valorSelect.toUpperCase());
+	$("#p-2").text("CLP");
+	$("#id-input").val(" ");
+	$("#id-result").text("0");
+	$("#id-input").focus();
+	cambio = false;
+	return;
+}
