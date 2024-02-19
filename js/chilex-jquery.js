@@ -9,6 +9,9 @@ function capturaDatos() {
 			const filteredData = {};
 			filtroPesos = filteredData;
 			for (const key in datosIndicador) {
+				if (key === "dolar_intercambio"){
+					continue;
+				}
 				if (datosIndicador[key].unidad_medida === "Pesos") {
 					filteredData[key] = datosIndicador[key];
 				}
