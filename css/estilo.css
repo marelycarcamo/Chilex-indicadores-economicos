@@ -8,7 +8,9 @@ body {
 }
 
 
-
+div{
+	border: 1px solid red;
+}
 
 
 
@@ -16,11 +18,13 @@ body {
 
 #block-1{
 	order: 2;
+	display:flex;
+	flex-direction: row;
 	justify-content: space-between;
+
 }
 #block-2{
 	order: 1;
-	flex-direction: row;
 	justify-content: space-between;
 }
 
@@ -57,11 +61,28 @@ p {
 	width: 75px;
 }
 
+td {
+	padding: 4px;
+	
+}
+
+#id-input{
+	display: flex;
+	align-self: flex-start;
+}
+
 }
 
 #id-result{
 	overflow: auto;
+	color: rgb(108, 103, 103);
 }
+
+#block-1{
+	align-items: end;
+	
+}
+
 
 
 /* 
@@ -104,7 +125,9 @@ p {
 	/* background-color: white */
 } 
 
-
+/* #block-1{
+	align-items: end;
+} */
 
 
 
@@ -120,6 +143,7 @@ p {
 		/* Añade aquí el resto de tus estilos para el tema oscuro */
 	}
 }
+
 
 
 
