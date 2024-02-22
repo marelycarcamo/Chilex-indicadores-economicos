@@ -7,32 +7,6 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div {
-	border: 1px solid red;
-}
-
-/* 
-##################################### */
-/* TABLA INDICADORES ECONOMICOS */
-/* 
-##################################### */
-#container-table {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Arial, sans-serif;
-}
-
-#indicadores {
-	width: 80%;
-	max-width: 600px;
-	border-collapse: collapse;
-}
-td {
-	border: 1px solid rgb(85, 71, 71);
-	padding: 8px;
-	text-align: right;
-}
 
 
 
@@ -67,18 +41,16 @@ td {
 p {
 	font-family: Arial, sans-serif;
 	font-size: 14px;
-	/* color: #333; */
-	/* width: 100px; */
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box; 
 	height: 40px;
-	/* background-color: white */
 } 
 
 #id-input, #id-result{
 	width: 150px;
+
 }
 
 #p-1,#p-2{
@@ -87,6 +59,9 @@ p {
 
 }
 
+#id-result{
+	overflow: auto;
+}
 
 
 /* 
@@ -132,6 +107,9 @@ p {
 
 
 
+
+
+
 /* Estilos para el tema oscuro */
 @media (prefers-color-scheme: dark) {
 
@@ -141,4 +119,29 @@ p {
 		/* color: white; */
 		/* Añade aquí el resto de tus estilos para el tema oscuro */
 	}
+}
+
+
+
+/* 
+##################################### */
+/* TABLA INDICADORES ECONOMICOS */
+/* 
+##################################### */
+#container-table {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+#indicadores {
+	width: 80%;
+	max-width: 600px;
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid rgb(85, 71, 71);
+	padding: 8px;
+	text-align: right;
 }
