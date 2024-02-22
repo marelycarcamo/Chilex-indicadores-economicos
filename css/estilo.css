@@ -38,15 +38,56 @@ td {
 
 
 
- @media only screen and (max-width: 600px) {
-	table {
-	  width: 100%;
-	}
-	/* td {
-	  font-size: 12px;
-	} */
-  }
-   
+@media only screen and (max-width: 600px) {
+
+#block-1{
+	order: 2;
+	justify-content: space-between;
+}
+#block-2{
+	order: 1;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#block-3{
+	order: 3;
+	justify-content: space-between;
+}
+#id-select{
+	width: min-content;
+	justify-content: start;
+}
+
+#id-img-arrows{
+	justify-content: end;
+}
+
+#id-input,
+p {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	/* color: #333; */
+	/* width: 100px; */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box; 
+	height: 40px;
+	/* background-color: white */
+} 
+
+#id-input, #id-result{
+	width: 150px;
+}
+
+#p-1,#p-2{
+	width: 75px;
+}
+
+}
+
+
 
 /* 
 ##################################### */
@@ -75,8 +116,8 @@ input:hover {
 	box-shadow: 0 0 10px #9ecaed;
 }
 
-.input,
-.p {
+input,
+p {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	/* color: #333; */
