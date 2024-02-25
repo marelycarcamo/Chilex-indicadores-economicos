@@ -53,6 +53,7 @@ capturaDatos();
 var cambio = false;
 $(document).ready(function () {
 	var rotation = 0;
+
 	$("#id-img-arrows").click(function () {
 		cambio = !cambio;
 		rotation += 180;
@@ -131,3 +132,11 @@ function limpiar() {
 	cambio = false;
 	return;
 }
+
+
+
+
+
+
+
+

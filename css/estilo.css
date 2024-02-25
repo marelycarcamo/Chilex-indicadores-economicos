@@ -8,7 +8,7 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
 #block-1{
 	order: 2;
@@ -98,7 +98,6 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
-	-moz-appearance: textfield;
 	transition: box-shadow 0.3s ease;
 }
 
@@ -116,22 +115,19 @@ p {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box; 
-	/* background-color: white */
 } 
 
-/* #block-1{
-	align-items: end;
-} */
-
-
+#id-img-arrows{
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 5px 0px lightgray;
+}
 
 
 
 /* Estilos para el tema oscuro */
 @media (prefers-color-scheme: dark) {
 
-	input,
-	p {
+	input,	p {
 		/* background-color: black; */
 		/* color: white; */
 		/* Añade aquí el resto de tus estilos para el tema oscuro */
